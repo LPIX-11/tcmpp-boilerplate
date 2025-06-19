@@ -1,5 +1,4 @@
 {
-	"projectid": "mpqpwy9sq24wa9eo_Orange%20Music%20Talent",
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
@@ -23,8 +22,7 @@
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"TCMPPappid": "mpqpwy9sq24wa9eo",
-	"projectname": "Orange%20Music%20Talent",
+	"projectname": "TCMPP Boilerplate",
 	"scripts": {},
 	"permission": {
 		"scope.album": {

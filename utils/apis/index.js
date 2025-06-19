@@ -56,4 +56,4 @@ export class BackendAPI {
 }
 
 // Singleton export for now, can be replaced with DI later
-export const BackendAPI = new BackendAPI();
+export const backendAPI = new BackendAPI();
