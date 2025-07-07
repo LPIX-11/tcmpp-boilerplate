@@ -4,13 +4,12 @@ import { eventBus } from "./builder";
  * TCMPP Event Bus - Enterprise-Grade State Management + Event System
  * Bulletproof, async-ready, and built for production mini-programs
  * 
+ * Global Bus interface with full type safety
+ * 
  * @fileoverview Advanced event bus with full validation, async middleware, and replay capabilities
  * @version 1.0.0
  * @author TCMPP Team
- */
-
-/**
- * Global Bus interface with full type safety
+ * @type {EventBus}
  */
 const Bus = {
   // Event methods
@@ -155,69 +154,5 @@ const Bus = {
   instance: eventBus
 };
 
-// Export for different environments
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = Bus;
-} else if (typeof window !== 'undefined') {
-  window.Bus = Bus;
-}
 
-// Usage Examples with full type safety:
-/*
-// Enable strict mode and debug
-Bus.setStrictMode(true);
-Bus.setDebug(true);
-
-// Basic events with validation
-const unsubscribe = Bus.on('user.login', (userData) => {
-  console.log('User logged in:', userData);
-}, { priority: 10, namespace: 'auth' });
-
-// Async emit with middleware
-await Bus.emit('user.login', { id: 123, name: 'John' });
-
-// Async middleware with validation
-Bus.use(async (eventData) => {
-  if (eventData.event === 'payment.process') {
-    const user = Bus.getState('user');
-    if (!user?.authenticated) {
-      eventData.cancelled = true;
-      console.log('Payment cancelled - user not authenticated');
-    }
-  }
-});
-
-// State management with history
-Bus.setState('user.credits', 50);
-Bus.onState('user.credits', (stateChange) => {
-  console.log('Credits changed:', stateChange);
-});
-
-// Replay events for late-joining components
-Bus.replay('user.*', (data, event) => {
-  console.log('Replaying:', event, data);
-}, (eventData) => eventData.timestamp > Date.now() - 60000); // Last minute only
-
-// Namespace management for cleanup
-Bus.on('video.play', handleVideoPlay, { namespace: 'video-player' });
-Bus.on('video.pause', handleVideoPause, { namespace: 'video-player' });
-
-// Later: clean up all video player listeners
-Bus.offNamespace('video-player');
-
-// Get comprehensive history
-const userStateHistory = Bus.getStateHistory('user');
-const videoEvents = Bus.getEventHistory('video.play');
-
-// Wildcard events with async handling
-Bus.on('payment.*', async (data, event) => {
-  await logPaymentEvent(event, data);
-});
-
-// Advanced validation in action
-try {
-  Bus.on('', invalidCallback); // Throws in strict mode
-} catch (error) {
-  console.error('Validation error:', error.message);
-}
-*/
+export { Bus };
