@@ -89,3 +89,12 @@
  * @param {IRequestOptions} [options.config] - Optional request configuration
  * @returns {Promise<IAPIResponse>}
  */
+
+/**
+ * @typedef {Object} IUnifiedResponse
+ * @property {boolean} success - Whether the request was successful.
+ * @property {any} data - Response data if successful.
+ * @property {{code?:number, message:string}|null} error - Error object if failed.
+ * @property {Object} headers - Response headers.
+ * @property {number} status - HTTP status code.
+ */

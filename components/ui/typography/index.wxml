@@ -1,0 +1,17 @@
+<view
+  class="typography"
+  style="
+    color: {{ colour }};
+    font-weight: {{ fontWeight }};
+    text-align: {{ align }};
+    font-size: {{ fontSize }};
+    text-decoration: {{ textDecoration }};
+    white-space: {{ ellipsis ? 'nowrap' : 'normal' }};
+    overflow: {{ ellipsis ? 'hidden' : 'visible' }};
+    text-overflow: {{ ellipsis ? 'ellipsis' : 'initial' }};
+    word-break: break-word;
+    line-height: {{ lineHeight }};
+  "
+>
+  {{ message }}
+</view>
