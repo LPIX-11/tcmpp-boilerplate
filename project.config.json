@@ -22,7 +22,7 @@
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"projectname": "TCMPP Boilerplate",
+	"projectname": "TCMPP%20Boilerplate",
 	"scripts": {},
 	"permission": {
 		"scope.album": {
@@ -32,6 +32,7 @@
 			"desc": "Used to capture photos or videos"
 		}
 	},
+	"SASappid": "mp1vl29c7w1xcmbo",
 	"condition": {
 		"search": {
 			"current": -1,
