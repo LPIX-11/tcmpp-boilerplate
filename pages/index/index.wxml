@@ -10,6 +10,7 @@
       <app-typography size="24" weight="700" color="#333">
         Welcome, {{ userName }}
       </app-typography>
+
       <app-typography size="14" color="#666">
         This boilerplate provides production-ready patterns for TCMPP mini-apps.
       </app-typography>

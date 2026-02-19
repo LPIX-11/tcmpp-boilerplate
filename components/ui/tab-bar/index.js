@@ -1,3 +1,23 @@
+/**
+ * Tab Bar Component
+ * Horizontal tab switcher with active state tracking and customizable styling.
+ * Supports multiple slots for tab content panels.
+ *
+ * @example
+ * <app-tab-bar
+ *   tabs="{{ [{ key: 'info', label: 'Info' }, { key: 'reviews', label: 'Reviews' }] }}"
+ *   default="info"
+ *   bind:changedActive="onTabChange"
+ * />
+ *
+ * @property {Array<{key: string, label: string}>} tabs - Tab items
+ * @property {string} default - Initial active tab key
+ * @property {string} containerClass - Tabs wrapper CSS class
+ * @property {string} itemContainerClass - Each tab item CSS class
+ * @property {string} activeItemContainerClass - Active tab item CSS class
+ *
+ * @fires changedActive - On tab switch (detail: { key })
+ */
 Component({
   options: {
     multipleSlots: true

@@ -1,35 +1,40 @@
-
 /**
- * index
+ * Icon Component
+ * Renders an icon image from the global assets directory with optional
+ * circular background. Icon files are resolved from /assets/icons/global/.
+ *
+ * @example
+ * <app-icon icon="home" width="{{ 32 }}" height="{{ 32 }}" enableBg />
+ *
+ * @property {string} containerClass - Additional CSS class for wrapper
+ * @property {string} bgColor - Background circle color (default: '#F3F3F3')
+ * @property {boolean} enableBg - Show background circle behind icon
+ * @property {string} icon - Icon filename (without path or extension)
+ * @property {number} width - Icon width in rpx (default: 50)
+ * @property {number} height - Icon height in rpx (default: 50)
  */
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
     containerClass: String,
     bgColor: {
       type: String,
-      value: '#F3F3F3'
+      value: '#F3F3F3',
     },
     enableBg: {
       type: Boolean,
-      value: false
+      value: false,
     },
     icon: String,
     width: {
       type: Number,
-      value: 50
+      value: 50,
     },
     height: {
       type: Number,
-      value: 50
+      value: 50,
     },
   },
 
-  /**
-   * 组件的初始数据
-   */
   data: {
     BASE_URL: '/assets/icons/global/',
     CONTAINER: {},
@@ -41,16 +46,10 @@ Component({
         CONTAINER: {
           HEIGHT: this.properties.height + 40,
           WIDTH: this.properties.width + 40,
-        }
-      })
-    }
+        },
+      });
+    },
   },
 
-  /**
-   * 组件的方法列表
-   */
-  methods: {
-
-  }
-})
-
+  methods: {},
+});

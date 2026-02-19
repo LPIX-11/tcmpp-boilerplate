@@ -1,5 +1,3 @@
-@import '/app.wxss';
-
 .osn-quantity-input {
   /* Minimal styling: layout is up to parent via classes */
 }

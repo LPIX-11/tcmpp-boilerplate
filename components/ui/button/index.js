@@ -1,6 +1,17 @@
 /**
  * Button Component
- * Primary/secondary variants with loading state and press animation
+ * Primary/secondary variants with loading state and press animation.
+ *
+ * @example
+ * <app-button type="primary" bind:onPress="handleTap">
+ *   Submit
+ * </app-button>
+ *
+ * @property {boolean} disabled - Prevents interaction when true
+ * @property {boolean} loading - Shows loading spinner, prevents interaction
+ * @property {'primary'|'secondary'} type - Visual variant (default: 'primary')
+ *
+ * @fires onPress - When button is tapped (only if not disabled/loading)
  */
 Component({
   properties: {

@@ -1,5 +1,5 @@
 <view 
-  class="tc-center {{ customClass }}" 
+  class="osn-center {{ customClass }}" 
   style="{{ computedStyle }}"
 >
   <slot></slot>

@@ -1,10 +1,10 @@
 <view
-  class="typography"
+  class="osn-typography"
   style="
-    color: {{ colour }};
-    font-weight: {{ fontWeight }};
+    color: {{ computedColor }};
+    font-weight: {{ computedWeight }};
     text-align: {{ align }};
-    font-size: {{ fontSize }};
+    font-size: {{ computedSize }};
     text-decoration: {{ textDecoration }};
     white-space: {{ ellipsis ? 'nowrap' : 'normal' }};
     overflow: {{ ellipsis ? 'hidden' : 'visible' }};
@@ -13,5 +13,6 @@
     line-height: {{ lineHeight }};
   "
 >
+  <slot></slot>
   {{ message }}
 </view>

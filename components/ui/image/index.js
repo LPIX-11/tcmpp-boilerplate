@@ -1,4 +1,56 @@
-// components/tc-image/index.js
+/**
+ * Image Component
+ * Feature-rich image with lazy loading, automatic retry, local caching,
+ * full-screen preview, and EventBus integration.
+ *
+ * @example
+ * <app-image
+ *   src="/assets/hero.png"
+ *   mode="aspectFill"
+ *   width="300rpx"
+ *   height="300rpx"
+ *   previewable
+ *   retryCount="{{ 2 }}"
+ * />
+ *
+ * @property {string} src - Image source URL
+ * @property {string} fallbackSrc - Fallback URL on load failure
+ * @property {string} mode - Image scaling mode (default: 'aspectFill')
+ * @property {boolean} lazyLoad - Enable lazy loading (default: true)
+ * @property {boolean} showMenuByLongpress - Show context menu on long press
+ * @property {string} width - Image width (CSS value)
+ * @property {string} height - Image height (CSS value)
+ * @property {string} containerClass - Wrapper CSS class
+ * @property {string} imageClass - Image element CSS class
+ * @property {string} containerStyle - Wrapper inline styles
+ * @property {string} imageStyle - Image element inline styles
+ * @property {string} overlayClass - Overlay slot CSS class
+ * @property {string} badge - Badge text displayed over the image
+ * @property {string} badgeClass - Badge CSS class
+ * @property {string} badgeStyle - Badge inline styles
+ * @property {string} loadingText - Text shown while loading
+ * @property {string} errorText - Text shown on error
+ * @property {string} retryText - Text for retry action
+ * @property {string} errorIcon - Icon shown on error (default: '⚠️')
+ * @property {boolean} previewable - Enable full-screen preview on tap
+ * @property {string[]} previewUrls - URLs for preview gallery
+ * @property {number} retryCount - Max retry attempts (default: 3)
+ * @property {number} retryDelay - Delay between retries in ms (default: 1000)
+ * @property {string} cacheKey - Custom cache key (defaults to src)
+ * @property {string} namespace - EventBus namespace (default: 'tc-image')
+ *
+ * @fires image:created - Component attached (detail: ImageInfo)
+ * @fires image:destroyed - Component detached (detail: { id })
+ * @fires image:loaded - Image loaded successfully (detail: ImageInfo)
+ * @fires image:error - All retries exhausted (detail: ImageInfo)
+ * @fires image:retry - Retry attempt started (detail: { count })
+ * @fires image:load - Native load event (detail: { id, detail })
+ * @fires image:tap - Image tapped (detail: ImageInfo)
+ * @fires image:longpress - Image long-pressed (detail: ImageInfo)
+ *
+ * @method reload - Force reload the image from source
+ * @method getImageInfo - Returns { id, src, loading, error }
+ */
 Component({
   options: {
     virtualHost: true,

@@ -1,6 +1,14 @@
 /**
  * Nav Bar Component
- * Custom navigation bar with safe area handling, back button, and title
+ * Custom navigation bar with safe area handling, back button, and title.
+ * Reads system status bar height to position content below the notch.
+ *
+ * @example
+ * <app-nav-bar title="Settings" showBack />
+ *
+ * @property {string} title - Navigation bar title text
+ * @property {boolean} showBack - Show back arrow (default: true)
+ * @property {boolean} transparent - Use transparent background
  */
 Component({
   properties: {

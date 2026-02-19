@@ -1,27 +1,21 @@
-
 /**
- * index
+ * Card Component
+ * Slot-based content container with optional custom class.
+ * Inherits page-level utility classes via apply-shared.
+ *
+ * @example
+ * <app-card containerClass="p-3 br-10">
+ *   <view>Card content here</view>
+ * </app-card>
+ *
+ * @property {string} containerClass - Additional CSS class for the card wrapper
  */
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
-    containerClass: String
+    containerClass: String,
   },
 
-  /**
-   * 组件的初始数据
-   */
-  data: {
+  data: {},
 
-  },
-
-  /**
-   * 组件的方法列表
-   */
-  methods: {
-
-  }
-})
-
+  methods: {},
+});

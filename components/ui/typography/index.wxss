@@ -1,7 +1,6 @@
-@import "/app.wxss";;
 /**
  * index
  */
-.typography {
+.osn-typography {
   display: block;
 }

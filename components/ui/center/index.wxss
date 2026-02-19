@@ -1,4 +1,4 @@
-.tc-center {
+.osn-center {
   display: flex;
   align-items: center;
   justify-content: center;

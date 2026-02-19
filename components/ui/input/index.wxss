@@ -1,5 +1,3 @@
-@import '/app.wxss';
-
 .osn-input {
   position: relative;
   border-radius: 16rpx;

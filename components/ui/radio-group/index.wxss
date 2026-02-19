@@ -1,5 +1,3 @@
-@import '/app.wxss';
-
 .osn-radio-circle {
   width: 52rpx;
   height: 52rpx;

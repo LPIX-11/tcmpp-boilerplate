@@ -1,6 +1,39 @@
 /**
  * Modal Component
- * Versatile dialog with center/bottom sheet placement, backdrop blur, and slots
+ * Versatile dialog with center/bottom sheet placement, backdrop blur,
+ * and multiple slots (header, content, footer). Uses apply-shared for
+ * page-level utility class inheritance.
+ *
+ * @example
+ * <app-modal
+ *   visible="{{ showModal }}"
+ *   placement="bottom"
+ *   size="lg"
+ *   hasHeader
+ *   hasContent
+ *   bind:close="onClose"
+ * >
+ *   <view slot="header">Title</view>
+ *   <view slot="content">Body text</view>
+ *   <view slot="footer">
+ *     <app-button bind:onPress="onClose">Close</app-button>
+ *   </view>
+ * </app-modal>
+ *
+ * @property {boolean} visible - Show/hide the modal
+ * @property {string} overlayColor - Backdrop hex color (default: '#000')
+ * @property {number} overlayOpacity - Backdrop opacity 0-1 (default: 0.5)
+ * @property {'center'|'bottom'} placement - Dialog position (default: 'center')
+ * @property {'sm'|'md'|'lg'|'full'} size - Dialog width preset (default: 'md')
+ * @property {number} blur - Backdrop blur in px (default: 6)
+ * @property {string} containerClass - Dialog wrapper CSS class
+ * @property {string} overlayClass - Backdrop CSS class
+ * @property {boolean} backdropClosable - Close on backdrop tap (default: true)
+ * @property {boolean} hasHeader - Enable header slot
+ * @property {boolean} hasContent - Enable content slot
+ * @property {boolean} hasFooter - Enable footer slot
+ *
+ * @fires close - When the modal requests to close (backdrop tap)
  */
 Component({
   options: {

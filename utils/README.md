@@ -15,7 +15,7 @@ Utility modules providing the core infrastructure for the boilerplate.
 | [Mappers](mappers/README.md) | `utils/mappers/` | Sculpt schema definitions |
 | [Storage](../docs/13-storage-guide.md) | `utils/storage.js` | Safe wx storage wrapper |
 | [Config](../docs/03-getting-started.md#environment-configuration) | `utils/config.js` | Environment configuration |
-| [Errors](errors/README.md) | `utils/errors/` | Error handling (placeholder) |
+| [Errors](errors/README.md) | `utils/errors/` | Custom error hierarchy (AppError, Validation, Auth, Network, NotFound, ExternalService) |
 | [Handlers](handlers/README.md) | `utils/handlers/` | Event handlers (placeholder) |
 
 ## See Also
